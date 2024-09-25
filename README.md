@@ -10,9 +10,11 @@
 # https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 
 # Create a git-repos folder in documents
+```bash
 cd Documents/
 mkdir git-repos
 cd git-repos/
+```
 
 # Git Clone the Repos onto your computer
 git clone git@github.com:CMUAbstract/tartan-artibeus-sw.git
