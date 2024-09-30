@@ -48,10 +48,13 @@ make release
 # After this completes
 ```bash
 cd ../ # into utilities
-wget https://developer.arm.com/-/media/Files/downloads/gnu-rm/9-2020q2/gcc-arm-none-eabi-9-2020-q2-update-x86_64-linux.tar.bz2
-tar xjf gcc-arm-none-eabi-9-2020-q2-update-x86_64-linux.tar.bz2
+wget https://developer.arm.com/-/media/Files/downloads/gnu-rm/9-2020q2/gcc-arm-none-eabi-9-2020-q2-update-x86_64-linux.tar.bz2 # Intel Processor
+# OR
+wget https://developer.arm.com/-/media/Files/downloads/gnu-rm/9-2020q2/gcc-arm-none-eabi-9-2020-q2-update-aarch64-linux.tar.bz2 # ARM Processor
 
-add path fixing
+tar xjf gcc-arm-none-eabi-9-2020-q2-update-x86_64-linux.tar.bz2
+# OR
+tar xjf gcc-arm-none-eabi-9-2020-q2-update-aarch64-linux.tar.bz2 
 
 cd ../
 cd scripts/
@@ -60,6 +63,7 @@ st-flash
 cd ../
 cd software
 cd libopencm3/
+make clean
 make
 ```
 
