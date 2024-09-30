@@ -50,6 +50,9 @@ make release
 cd ../ # into utilities
 wget https://developer.arm.com/-/media/Files/downloads/gnu-rm/9-2020q2/gcc-arm-none-eabi-9-2020-q2-update-x86_64-linux.tar.bz2
 tar xjf gcc-arm-none-eabi-9-2020-q2-update-x86_64-linux.tar.bz2
+
+add path fixing
+
 cd ../
 cd scripts/
 source sourcefile.txt
