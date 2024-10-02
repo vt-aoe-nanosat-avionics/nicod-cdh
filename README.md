@@ -72,5 +72,12 @@ make
 cd ../
 cd blink
 make
+st-flash write blink.bin 0x8000000
+
+# or Blink Fast
+cd ..
+cd blink-fast
+make
+st-flash write blink-fast.bin 0x8000000
 ```
 
