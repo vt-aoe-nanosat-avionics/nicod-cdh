@@ -1,0 +1,14 @@
+# How to install rust and run it on VS Code
+
+# Start with installing VS code
+https://code.visualstudio.com/download
+
+# Once VS code starts you can add extensions to it by selecting the extensions tab or using (CRTL + SHIFT + X)
+Search for rust-analyzer and select the top choice
+
+# The second extension you will need is CodeLLDB which is for debugging and testing in Runtime
+Search for CodeLLDB
+
+# Package extensions
+Search for 
+
