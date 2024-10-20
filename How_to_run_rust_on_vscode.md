@@ -24,9 +24,6 @@ cargo new Hello_World
 ```
 Once the cargo has been set up, you can find the main file in the main section under Hello_World -> src -> main.rs
 
-
-
-
-# Package extensions
-Search for 
+# Running your code 
+In the .rs file simply click on the run button at the top and your code will compile and output in the terminal
 
