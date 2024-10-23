@@ -1,5 +1,29 @@
 // nico_blink.c
 
+#include <stdint.h>
+#define MMIO32(addr)            (*(volatile uint32_t *)(addr))
+#define GPIO_MODE_OUTPUT                0x1
+#define GPIO_PUPD_NONE                  0x0
+#define GPIO10                          (1 << 10)
+#define GPIO12                          (1 << 12)
+#define PERIPH_BASE                     (0x40000000U)
+#define PERIPH_BASE_AHB2                (0x48000000U)
+#define PERIPH_BASE_AHB1                (PERIPH_BASE + 0x20000)
+#define GPIO_PORT_C_BASE                (PERIPH_BASE_AHB2 + 0x0800)
+#define GPIOC                           GPIO_PORT_C_BASE
+#define RCC_BASE                        (PERIPH_BASE_AHB1 + 0x1000)
+#define GPIO_MODE_MASK(n)               (0x3 << (2 * (n)))
+#define GPIO_PUPD_MASK(n)               (0x3 << (2 * (n)))
+
+#define _REG_BIT(base, bit)             (((base) << 5) + (bit))
+#define RCC_AHB2ENR_OFFSET              0x4c
+enum rcc_periph_clken {
+
+RCC_GPIOC = _REG_BIT(RCC_AHB2ENR_OFFSET, 2),
+
+};
+
+
 // For rcc_periph_clock_enable
 #define _RCC_REG(i)             MMIO32(RCC_BASE + ((i) >> 5))
 #define _RCC_BIT(i)             (1 << ((i) & 0x1f))
@@ -12,6 +36,14 @@
 #define GPIO_BSRR(port)                 MMIO32((port) + 0x18)
 //For gpio_toggle
 #define GPIO_ODR(port)                  MMIO32((port) + 0x14)
+
+void rcc_periph_clock_enable(enum rcc_periph_clken clken);
+void gpio_mode_setup(uint32_t gpioport, uint8_t mode, uint8_t pull_up_down,
+                     uint16_t gpios);
+void gpio_set(uint32_t gpioport, uint16_t gpios);
+void  gpio_clear(uint32_t gpioport, uint16_t gpios);
+void gpio_toggle(uint32_t gpioport, uint16_t gpios);
+
 
 void rcc_periph_clock_enable(enum rcc_periph_clken clken)
 {
