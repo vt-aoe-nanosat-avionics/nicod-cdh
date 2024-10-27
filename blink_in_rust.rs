@@ -53,7 +53,7 @@ unsafe fn gpio_mode_setup(gpioport: usize, mode: u8, pull_up_down: u8, gpios: u1
         pupd |= (pull_up_down as u32) << (2 * i);
     }
 
-    *mmio32!(gpioport + 0x00) = moder;
+    *mmio32!(gpioport + 0x00) = moder; //The * dereferences the mutable pointer returned by the mmio32! macro. Accessing the memory at the address and treating it as if it were a u32 value.
     *mmio32!(gpioport + 0x0C) = pupd;
 }
 
