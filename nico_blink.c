@@ -17,11 +17,8 @@
 
 #define _REG_BIT(base, bit)             (((base) << 5) + (bit))
 #define RCC_AHB2ENR_OFFSET              0x4c
-enum rcc_periph_clken {
+#define RCC_GPIOC                       (((RCC_AHB2ENR_OFFSET) << 5) + (2))
 
-RCC_GPIOC = _REG_BIT(RCC_AHB2ENR_OFFSET, 2),
-
-};
 
 
 // For rcc_periph_clock_enable
