@@ -32,7 +32,7 @@
 //For gpio_toggle
 #define GPIO_ODR(port)                  MMIO32((port) + 0x14)
 
-void rcc_periph_clock_enable(enum rcc_periph_clken clken);
+void rcc_periph_clock_enable(uint32_t clken);
 void gpio_mode_setup(uint32_t gpioport, uint8_t mode, uint8_t pull_up_down,
                      uint16_t gpios);
 void gpio_set(uint32_t gpioport, uint16_t gpios);
@@ -40,7 +40,7 @@ void  gpio_clear(uint32_t gpioport, uint16_t gpios);
 void gpio_toggle(uint32_t gpioport, uint16_t gpios);
 
 
-void rcc_periph_clock_enable(enum rcc_periph_clken clken)
+void rcc_periph_clock_enable(uint32_t clken)
 {
         _RCC_REG(clken) |= _RCC_BIT(clken);
 }
