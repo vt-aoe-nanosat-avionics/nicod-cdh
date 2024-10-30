@@ -17,7 +17,12 @@
 
 #define _REG_BIT(base, bit)             (((base) << 5) + (bit))
 #define RCC_AHB2ENR_OFFSET              0x4c
-#define RCC_GPIOC                       (((RCC_AHB2ENR_OFFSET) << 5) + (2))
+enum rcc_periph_clken {
+
+RCC_GPIOC = _REG_BIT(RCC_AHB2ENR_OFFSET, 2),
+
+};
+
 
 // For rcc_periph_clock_enable
 #define _RCC_REG(i)             MMIO32(RCC_BASE + ((i) >> 5))
@@ -94,7 +99,7 @@ void gpio_toggle(uint32_t gpioport, uint16_t gpios)
 // Makes the Tartan Artibeus EXPT board LEDs blink
 //
 // Written by Bradley Denby
-// Other contributors: Nico Demarinis
+// Other contributors: None
 //
 // See the top-level LICENSE file for the license.
 
