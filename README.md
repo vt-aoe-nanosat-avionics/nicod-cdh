@@ -18,6 +18,7 @@ cd git-repos/
 
 # Git Clone the Repos onto your computer
 ```bash
+sudo apt install git
 git clone git@github.com:CMUAbstract/tartan-artibeus-sw.git
 git clone git@github.com:CMUAbstract/tartan-artibeus-hw.git
 ls -al #List all to check if they are cloned properly
