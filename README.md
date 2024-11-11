@@ -60,7 +60,7 @@ tar xjf gcc-arm-none-eabi-9-2020-q2-update-aarch64-linux.tar.bz2
 cd ../
 cd scripts/
 source sourcefile.txt
-st-flash
+st-flash -h
 cd ../
 cd software
 cd libopencm3/
