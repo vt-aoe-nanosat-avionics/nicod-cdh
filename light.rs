@@ -86,7 +86,7 @@ fn main() -> ! {
         gpio_set(GPIOC, GPIO10 as u16);
         gpio_clear(GPIOC, GPIO12 as u16);
     }
-    
+    loop {
         unsafe {
             gpio_toggle(GPIOC, GPIO10 as u16);
             //gpio_toggle(GPIOC, GPIO12 as u16);
