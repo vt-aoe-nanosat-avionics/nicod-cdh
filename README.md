@@ -82,3 +82,8 @@ make
 st-flash write blink-fast.bin 0x8000000
 ```
 
+# If all else should fail with ST Link
+```bash
+sudo apt install stlink-tools
+```
+
