@@ -13,7 +13,8 @@ rustup component add llvm-tools
 cargo install cargo-generate
 sudo apt install gdb-multiarch openocd qemu-system-arm
 ```
-# Udev Rules (This will allow you to write binary output files to the board)
+# Udev Rules (This will allow you to write binary output files to the board) 
+## Refer to the Rust book linked at the top for a more indepth look at this
 ```bash
 # Create this path 
 /etc/udev/rules.d/
@@ -44,14 +45,14 @@ cd ../.cargo
 nano config.toml
 # In this file you will want to uncomment the thumbv7em-none-eabihf which is the target for the M4F, I also changed the first line to match this as well
 rustup target add thumbv7em-none-eabihf
-cargo build
+cargo build # or cargo build --release for smaller binary file size
 
 ```
 # Finding the binary file
 ```bash
 cd target/thumbv7em-none-eabihf/debug
-# This is where the binary file outputs
-
+# This is where the binary file outputs or if using cargo build --release
+cd target/thumbv7em-none-eabihf/release
 ```
 
 
