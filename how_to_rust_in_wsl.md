@@ -38,3 +38,5 @@ opt-level = 'z' # Also an opt-level = 's', check which one works best for your c
 panic = 'abort'
 debug = true # symbols are nice and they don't increase the size on Flash
 ```
+File Optimization Method Comparison: 
+![alt text](images/File_size_opt_rust.png)
