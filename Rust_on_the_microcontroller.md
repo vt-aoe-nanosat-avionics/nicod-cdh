@@ -45,7 +45,7 @@ cd ../.cargo
 nano config.toml
 # In this file you will want to uncomment the thumbv7em-none-eabihf which is the target for the M4F, I also changed the first line to match this as well
 rustup target add thumbv7em-none-eabihf
-cargo build # or cargo build --release for smaller binary file size
+cargo build # or cargo build --release for a smaller binary file size
 
 ```
 # Finding the binary file
