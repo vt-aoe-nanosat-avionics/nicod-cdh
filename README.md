@@ -1,4 +1,5 @@
 # Nico DeMarinis Repo
+### Contact information: nicodemarinis@vt.edu
 ## In here you can find tutorials on how to set up the build enviroment for st-flash, libopencm3 and gcc. Along with how to run rust on WSL, VScode and on the microcontrollers.
 
 # Setting up the Build Envrionment for TA-expt Board
