@@ -9,6 +9,7 @@
 [How_to_run_rust_on_vscode](How_to_run_rust_on_vscode.md)
 
 # Running Rust in WSL
+[how_to_rust_in_wsl](how_to_rust_in_wsl.md)
 
 ## There is a blink.rs file that complies but does not work yet on the microcontroller
 [Blink_wsl](Blink_wsl.rs)
