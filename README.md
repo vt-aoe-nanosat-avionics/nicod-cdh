@@ -3,19 +3,19 @@
 
 # Setting up the Build Envrionment for TA-expt Board
 ## This will allow you to flash binary files onto the PCB
-[How_to_st_flash](../How_to_st_flash.md)
+[How_to_st_flash](How_to_st_flash.md)
 
 # Running Rust in VScode
-[How_to_run_rust_on_vscode](../How_to_run_rust_on_vscode.md)
+[How_to_run_rust_on_vscode](How_to_run_rust_on_vscode.md)
 
 # Running Rust in WSL
 
 ## There is a blink.rs file that complies but does not work yet on the microcontroller
-[Blink_wsl](../Blink_wsl.rs)
+[Blink_wsl](Blink_wsl.rs)
 
 # Running Rust on the Microcontroller
 ## Refer to the rust book that is linked inside this file, it has much more information on the set up process. 
-[Rust_on_the_microcontroller](../Rust_on_the_microcontroller.md)
+[Rust_on_the_microcontroller](Rust_on_the_microcontroller.md)
 
 # Stand alone Blink with no dependencies in C (No reliance on header files)
-[no_dependencies _blink](../no_dependencies_blink.c)
+[no_dependencies _blink](no_dependencies_blink.c)
