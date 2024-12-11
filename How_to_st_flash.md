@@ -1,4 +1,3 @@
-# nicod-cdh
 # Getting Started with NanoSat@VT
 
 # Relevant Repositories:
