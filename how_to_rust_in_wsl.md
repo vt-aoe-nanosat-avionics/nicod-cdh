@@ -10,7 +10,7 @@ cargo install cargo-generate
 ```
 ## More for the ARM cortex microcontrollers
 ```bash
-sudo apt install gdb-multiarch openocd qemu-system-arm #For the microcontrollers
+sudo apt install gdb-multiarch openocd qemu-system-arm # For the microcontrollers
 cargo generate --git https://github.com/rust-embedded/cortex-m-quickstart
 
 ```
@@ -28,6 +28,13 @@ cargo build --release # Does not include debugging information and reduces binar
 ## To optimize the binary size further you can edit the settings in the Cargo.toml file
 ```bash
 nano Cargo.toml
-#In the [profile.release] section (at the bottom)
+#In the [profile.release] section (at the bottom) you can add these methods or change them as you see fit:
 
+codegen-units = 1 # better optimizations
+lto = true # better optimizations
+strip = true
+opt-level = 'z' # Also an opt-level = 's', check which one works best for your code
+# Panic and debug do not do anything to file size
+panic = 'abort'
+debug = true # symbols are nice and they don't increase the size on Flash
 ```
