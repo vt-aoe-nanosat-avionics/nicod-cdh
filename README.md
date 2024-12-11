@@ -19,5 +19,5 @@
 ## Refer to the rust book that is linked inside this file, it has much more information on the set-up process. 
 [Rust_on_the_microcontroller](Rust_on_the_microcontroller.md)
 
-# Stand alone Blink with no dependencies in C (No reliance on header files)
+# Stand alone Blink with no dependencies in C (No need for header files)
 [no_dependencies _blink](no_dependencies_blink.c)
