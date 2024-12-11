@@ -30,11 +30,11 @@ cargo build --release # Does not include debugging information and reduces binar
 nano Cargo.toml
 #In the [profile.release] section (at the bottom) you can add these methods or change them as you see fit:
 
-codegen-units = 1 # better optimizations
 lto = true # better optimizations
 strip = true
 opt-level = 'z' # Also an opt-level = 's', check which one works best for your code
-# Panic and debug do not do anything to file size
+# Panic, debug, and codegen do not do anything to file size
+codegen-units = 1
 panic = 'abort'
 debug = true # symbols are nice and they don't increase the size on Flash
 ```
